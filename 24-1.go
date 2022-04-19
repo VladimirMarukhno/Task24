@@ -24,7 +24,8 @@ func creatArr() []int {
 	fmt.Println("Введите количество элементов в массиве.")
 	_, err := fmt.Scan(&size)
 	if err != nil {
-		fmt.Errorf("Ошибка :%s", err)
+		fmt.Println(err)
+		defer creatArr()
 	} else if size <= 0 {
 		fmt.Printf("Количество элементво в массиве(%d) не может быть меньше или равно 0.\n", size)
 	}
@@ -33,7 +34,8 @@ func creatArr() []int {
 		fmt.Println("Введите следующий элемент.")
 		_, err = fmt.Scan(&elem)
 		if err != nil {
-			fmt.Errorf("Ошибка :%s", err)
+			fmt.Println(err)
+			i--
 		}
 		arr[i] = elem
 	}
