@@ -39,7 +39,7 @@ func creatArr() []int {
 		}
 		arr[i] = elem
 	}
-	fmt.Printf("Вашь массив : %d\n", arr)
+	fmt.Printf("Ваш массив : %d\n", arr)
 	return arr
 }
 

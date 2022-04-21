@@ -25,7 +25,7 @@ func creatArr() []int {
 		}
 		arr[i] = elem
 	}
-	fmt.Printf("Вашь массив : %d\n", arr)
+	fmt.Printf("Ваш массив : %d\n", arr)
 	return arr
 }
 func swap(ar []int, i, j int) {
@@ -39,7 +39,7 @@ func main() {
 	bubbleSort := func(input []int) {
 		for i := 0; i < len(input); i++ {
 			for j := i + 1; j < len(input); j++ {
-				if input[i] > input[j] {
+				if input[i] < input[j] {
 					swap(input, i, j)
 				}
 			}
